@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Ввод данных</title>
+    <link rel="stylesheet" href="web.css">
+    <!-- Manifest -->
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- Иконка для iOS -->
+    <link rel="apple-touch-icon" href="/icon-192x192.png">
+
+    <!-- Цвет темы -->
+    <meta name="theme-color" content="#1A3A6F">
+</head>
+<body>
+
+<header class="main-header">
+    <div class="logo">
+        <img src="logo_gubkin95_vertical.svg" alt="Логотип" class="logo-img">
+        <div>
+            <h1>НефтеПроГноз</h1>
+            <p class="tagline">Формирование базы данных для прогноза сезонных затрат</p>
+        </div>
+    </div>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="web.html">Ввод данных</a></li>
+            <li><a href="analitic.html">Просмотр данных</a></li>
+            <li><a href="contact.html">Контакты</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="input-form">
+    <h2>Ввод данных</h2>
+    <form id="costForm" action="submit.php" method="POST">
+        <label for="pipelineSection">Участок нефтепровода:</label>
+        <select id="pipelineSection" name="pipelineSection">
+            <option>Участок 1</option>
+            <option>Участок 2</option>
+            <option>Участок 3</option>
+            <option>Участок 4</option>
+            <option>Участок 5</option>
+        </select>
+
+        <label for="inputDate">Дата:</label>
+        <input type="date" id="inputDate" name="inputDate">
+
+        <label for="volume">Объем (тонн/мес):</label>
+        <input type="number" id="volume" name="volume">
+
+        <label for="season">Сезон (сезонный коэффициент):</label>
+        <select id="season" name="season">
+            <option>Зима</option>
+            <option>Весна</option>
+            <option>Лето</option>
+            <option>Осень</option>
+        </select>
+
+        <label for="EnergyCost">Затраты на электроэнергию:</label>
+        <input type="number" id="EnergyCost" name="EnergyCost" step="0.01">
+
+        <label for="MaintenanceCost">Затраты на обслуживание:</label>
+        <input type="number" id="MaintenanceCost" name="MaintenanceCost" step="0.01">
+
+        <button type="button" id="submitBtn">Добавить</button>
+    </form>
+    <div id="message" style="display: none; margin-top: 20px; padding: 15px; border-radius: 8px;"></div>
+</section>
+
+<footer>
+    <p>© 2025 Нефтетранспортная компания Мири</p>
+</footer>
+<script src="form-handler.js"></script>
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then(() => console.log('Service Worker зарегистрирован'))
+                .catch((err) => console.log('Ошибка:', err));
+        });
+    }
+</script>
+</body>
+</html>

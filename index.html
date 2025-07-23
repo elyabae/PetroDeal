@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Главная</title>
+    <link rel="stylesheet" href="main.css">
+    <!-- Manifest -->
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- Иконка для iOS -->
+    <link rel="apple-touch-icon" href="/icon-192x192.png">
+
+    <!-- Цвет темы -->
+    <meta name="theme-color" content="#1A3A6F">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <img src="logo_gubkin95_vertical.svg" alt="Логотип" class="logo-img">
+            <div>
+                <h1>НефтеПроГноз</h1>
+                <p class="tagline">Формирование базы данных для прогноза сезонных затрат</p>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="web.html">Ввод данных</a></li>
+                <li><a href="analitic.html">Просмотр данных</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <main>
+        <div class="project-description">
+    <h2>О проекте</h2>
+
+    <p><strong>Название проекта:</strong> Прогноз сезонных затрат на транспортировку нефтепродуктов</p>
+
+    <p><strong>Цель:</strong> Разработка веб-приложения, которое помогает анализировать и прогнозировать расходы на перевозку нефтепродуктов в зависимости от сезона и других факторов. Сайт ориентирован на использование внутри вымышленного нефтетранспортного предприятия.</p>
+
+    <h3>Функционал сайта</h3>
+    <ul>
+        <li><strong>Форма обратной связи</strong> — пользователь может оставить сообщение, отзыв или задать вопрос.</li>
+        <li><strong>Аналитическая страница</strong> — отображение отправленных сообщений в виде таблицы (динамически с помощью PHP и MySQL).</li>
+        <li><strong>Навигация</strong> — простая и понятная, с переходами между главной, аналитикой и контактами.</li>
+    </ul>
+
+    <h3>Технологии</h3>
+    <p>В проекте использованы:</p>
+    <ul>
+        <li>HTML + CSS — для вёрстки и стилей</li>
+        <li>PHP — для серверной логики</li>
+        <li>MySQL — для хранения данных формы</li>
+    </ul>
+
+    <h3>Почему это важно?</h3>
+    <p>Такой сайт — это первый шаг к цифровизации процессов на предприятии. Он может быть расширен: подключение графиков, расширенной статистики и прогнозов на основе реальных данных.</p>
+</div>
+
+    </main>
+    <footer>
+        <p>© 2025 Нефтетранспортная компания Мири</p>
+    </footer>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('service-worker.js')
+                    .then(() => console.log('Service Worker зарегистрирован'))
+                    .catch((err) => console.log('Ошибка:', err));
+            });
+        }
+    </script>
+</body>
+</html>

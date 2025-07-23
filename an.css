@@ -1,0 +1,174 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #F5F7FA;
+    margin: 0;
+    padding: 0;
+    color: #0A2E5E;
+}
+
+.main-header {
+    background: linear-gradient(to right, #1A3A6F, #0F4C75);
+    color: white;
+    padding: 30px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.logo .tagline {
+    margin: 8px 0 0;
+    font-size: 14px;
+    color: rgba(255,255,255,0.9);
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav li {
+    display: inline;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background-color: #D4AF37;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: right;
+}
+
+.main-nav a:hover {
+    color: #D4AF37;
+}
+
+.main-nav a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+#dataTable {
+    width: 100%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(26, 58, 111, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#dataTable th,
+#dataTable td {
+    border: 1px solid #5C6B73;
+    padding: 12px;
+    text-align: center;
+    font-size: 15px;
+    color: #0A2E5E;
+}
+
+#dataTable th {
+    background-color: #1A3A6F;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#dataTable tr:nth-child(even) {
+    background-color: rgba(245, 247, 250, 0.5);
+}
+
+#dataTable tr:hover {
+    background-color: rgba(212, 175, 55, 0.1);
+}
+
+main {
+    flex: 1;
+    padding: 40px;
+    background-color: #F5F7FA;
+}
+
+footer {
+    background: linear-gradient(to right, #0A2E5E, #1A3A6F);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+    border-top: 2px solid #D4AF37;
+    margin-top: auto;
+}
+
+.delete-btn {
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: #cc0000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.logo .tagline {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+}

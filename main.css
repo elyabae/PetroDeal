@@ -1,0 +1,188 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #F5F7FA; /* Светлый фон */
+    margin: 0;
+    padding: 0;
+    color: #0A2E5E; /* Темно-синий текст */
+}
+
+.main-header {
+    background: linear-gradient(to right, #1A3A6F, #0F4C75); /* Градиент синих оттенков */
+    color: white; /* Белый текст для контраста */
+    padding: 30px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.logo .tagline {
+    margin: 8px 0 0;
+    font-size: 14px;
+    color: rgba(255,255,255,0.9); /* Полупрозрачный белый */
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav li {
+    display: inline;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background-color: #D4AF37; /* Золотая полоса */
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: right;
+}
+
+.main-nav a:hover {
+    color: #D4AF37; /* Золотой при наведении */
+}
+
+.main-nav a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.contact-info {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 500px;
+    width: 100%;
+    color: #0A2E5E;
+    border: 1px solid #5C6B73; /* Графитовая рамка */
+}
+
+main {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    background-color: #F5F7FA;
+}
+
+.project-description {
+    max-width: 900px;
+    width: 100%;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    color: #0A2E5E;
+    font-size: 18px;
+    line-height: 1.8;
+    border: 1px solid #5C6B73;
+}
+
+.project-description h2,
+.project-description h3 {
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #1A3A6F; /* Темно-синие заголовки */
+}
+
+.project-description ul {
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.project-description li {
+    margin-bottom: 10px;
+}
+
+footer {
+    background: linear-gradient(to right, #0A2E5E, #1A3A6F); /* Темный градиент */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+    border-top: 2px solid #D4AF37; /* Золотая полоса */
+    margin-top: auto;
+}
+
+/* Добавим акцентные элементы */
+.cta-button {
+    background-color: #D4AF37;
+    color: #0A2E5E;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #F0C050;
+}
+
+.highlight {
+    color: #D4AF37;
+    font-weight: 600;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.logo .tagline {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+}
